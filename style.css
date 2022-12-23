@@ -1,0 +1,187 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF4F4;
+}
+.grid{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-areas: 'cabecalho cabecalho cabecalho'
+                       'birkin birkin birkin'
+                        'menu menu menu'
+                        'esquerda esquerda direita'
+                        'fotoCategoria fotoCategoria fotoCategoria'
+                        'video video video';
+}
+.cabecalho{
+  /*background: #EDECDF; */
+  background: #FFE4DA;
+  display: flex;
+  font-family: Cascadia Mono ExtraLight;
+  text-align: center;
+  height: 50px;
+  grid-area: cabecalho;
+  align-items: center;
+  justify-content: center;
+}
+.cabecalho p{
+  /*
+*/
+}
+.birkin{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  height: 144px;
+  width: 100%;
+  grid-area: birkin;
+  display: flex;
+  position: relative;
+  
+}
+figure{
+  width:180px;
+  height: auto;
+}
+figure img{
+  height: auto;
+  width: 100%;
+}
+.menu{
+  align-items: center;
+  grid-area: menu;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  background: #E6CBC9;
+  height: 45px;
+  /*font-family: Agency FB; */
+  /*font-family: 'Six Caps', sans-serif; */
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+}
+.menu a{
+  margin: 60px;
+  grid-area: menu;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  width: 45vh;
+  text-decoration: none;
+  color: #7D1D2D; 
+}
+.menu a:hover{
+  color: red;
+}
+.esquerda{
+  float: left;
+  grid-area: esquerda;
+}
+.esquerda img{
+  float:left; 
+  margin-top: 50px;
+  height: 500px;
+  width: 600px;
+}
+.direita{
+  grid-area: direita;
+
+}
+.letra1 p{
+  font-size: 75px;
+  margin-bottom: 0;
+  /*font-family: Yu Gothic UI Light; */
+  font-family: 'Six Caps', sans-serif;
+  text-align: left;
+  grid-area: direita;
+  margin-left: 35px;
+  /*text-shadow: 2px 6px 7px #575249; */
+  background: linear-gradient(to left, #EA3680, #7A003B,#B86C5E, #FFA9A9);
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  background-position: -100%;  
+  animation: animatedText 4s infinite alternate-reverse;
+}
+@keyframes animatedText{
+  to{
+    background-position: 100%; 
+  }
+}
+
+.letra2 p{
+  font-size: 65px;
+  margin-top: 0px;
+  grid-area: direita;
+  text-align: left;
+  margin-left: 35px;
+  /*link novo*/
+  background: linear-gradient(to left, #EA3680, #7A003B,#B86C5E, #FFA9A9);
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  background-position: -100%;  
+  animation: animatedText 4s infinite alternate-reverse;
+}
+
+@keyframes animatedText{
+  to{
+    background-position: 100%; 
+  }
+}
+
+
+.texto1 p{
+  grid-area: direita;
+  font-size: 25px;
+  color: #451019;
+  font-family: Gill Sans MT Condensed;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+.coluna-fotos{
+ grid-area: fotoCategoria;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+}
+.coluna-fotos a{
+  font-size: 25px;
+  font-family: Agency FB;
+  text-decoration: none;
+  color: #7D1D2D;
+}
+.coluna-fotos a:hover{
+  color: red;
+}
+.fotoCategoria{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 335px;
+  justify-content: center;
+  align-items: center;
+  margin: 100px; 
+  grid-area: fotoCategoria;
+  cursor: pointer;
+  /*box-shadow: 0px 7px 9px rgba(0,0,0,0.5); */
+  background-color: #FFF4F4;;
+}
+.fotoCategoria img{
+  height: 300px;
+  grid-area: fotocategoria;
+  width: 300px;
+  display: flex;
+}
